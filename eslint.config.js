@@ -1,11 +1,14 @@
+ 
 // eslint.config.js
 import js from "@eslint/js";
 import prettier from "eslint-plugin-prettier";
-
+import globals from "globals";
 export default [
   {
     languageOptions: {
       globals: {
+        ...globals.node,
+        ...globals.jest,
         // Node.js globals
         require: "readonly",
         module: "readonly",
@@ -27,11 +30,75 @@ export default [
       "no-console": "warn",
       "no-unused-vars": "error",
       "prefer-const": "warn",
-      "eqeqeq": ["error", "always"],
-      "curly": ["error", "all"],
-      "semi": ["error", "always"],
+      eqeqeq: ["error", "always"],
+      curly: ["error", "all"],
+      semi: ["error", "always"],
     },
   },
 ];
-
+ 
+ 
+ 
+{
+  "name": "pipeline",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest",
+    "test:unit": "jest tests/unit.test.js",
+    "test:integration": "jest tests/integration.test.js",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "*.js",
+      "!node_modules/**"
+    ],
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Calculate API Test Report",
+          "outputPath": "test-report.html"
+        }
+      ],
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "test-results",
+          "outputName": "junit.xml"
+        }
+      ]
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "CI/CD Pipeline excercise for testing team",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "audit-ci": "^7.1.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jest": "^30.2.0",
+    "jest-html-reporter": "^4.3.0",
+    "jest-junit": "^16.0.0",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4"
+  }
+}
  
