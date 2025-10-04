@@ -8,6 +8,8 @@
     "test:unit": "jest test/unit.test.js",
     "test:integration": "jest test/integration.test.js",
     "test:coverage": "jest --coverage"
+    "lint": "eslint .",
+    "lint:fix":"eslint . --fix"
   },
   "jest": {
     "testEnvironment": "node",
