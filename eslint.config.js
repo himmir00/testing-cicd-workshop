@@ -1,9 +1,11 @@
- 
-// eslint.config.js
 import js from "@eslint/js";
 import prettier from "eslint-plugin-prettier";
 import globals from "globals";
+
 export default [
+  // Include ESLint recommended rules first
+  js.configs.recommended,
+
   {
     languageOptions: {
       globals: {
@@ -19,13 +21,12 @@ export default [
       sourceType: "module",
     },
     plugins: {
-      prettier,
+      prettier: prettier, // ✅ key must be "prettier"
     },
     linterOptions: {
       reportUnusedDisableDirectives: "error",
     },
     rules: {
-      ...js.configs.recommended.rules,
       "prettier/prettier": "error",
       "no-console": "warn",
       "no-unused-vars": "error",
@@ -36,7 +37,7 @@ export default [
     },
   },
 ];
- 
+
  
  
 {
