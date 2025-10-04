@@ -2,6 +2,7 @@
 import js from '@eslint/js';
 import prettier from 'eslint-plugin-prettier';
 import globals from 'globals';
+import express from 'express'; // Prettier wants double quotes or single quotes based on your config
 
 export default [
   {

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="22" failures="0" errors="0" time="2.47">
+  <testsuite name="Calculator Unit Tests" errors="0" failures="0" skipped="0" timestamp="2025-10-04T11:49:05" time="1.399" tests="18">
+    <testcase classname="Calculator Unit Tests Addition should add two positive numbers" name="Calculator Unit Tests Addition should add two positive numbers" time="0.009">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Addition should add negative numbers" name="Calculator Unit Tests Addition should add negative numbers" time="0.002">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Addition should add positive and negative number" name="Calculator Unit Tests Addition should add positive and negative number" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Addition should add zero" name="Calculator Unit Tests Addition should add zero" time="0.002">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Addition should add one" name="Calculator Unit Tests Addition should add one" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Subtraction should subtract two numbers" name="Calculator Unit Tests Subtraction should subtract two numbers" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Subtraction should subtract negative numbers" name="Calculator Unit Tests Subtraction should subtract negative numbers" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Subtraction should subtract zero" name="Calculator Unit Tests Subtraction should subtract zero" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Subtraction should subtract one" name="Calculator Unit Tests Subtraction should subtract one" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Multiplication should multiply two numbers" name="Calculator Unit Tests Multiplication should multiply two numbers" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Multiplication should multiply with zero" name="Calculator Unit Tests Multiplication should multiply with zero" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Multiplication should multiply with one" name="Calculator Unit Tests Multiplication should multiply with one" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Multiplication should multiply negative numbers" name="Calculator Unit Tests Multiplication should multiply negative numbers" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Division should divide two numbers" name="Calculator Unit Tests Division should divide two numbers" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Division should return null for division by zero" name="Calculator Unit Tests Division should return null for division by zero" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Division should divide zero by a number" name="Calculator Unit Tests Division should divide zero by a number" time="0.001">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Division should divide by one" name="Calculator Unit Tests Division should divide by one" time="0.002">
+    </testcase>
+    <testcase classname="Calculator Unit Tests Division should divide negative numbers" name="Calculator Unit Tests Division should divide negative numbers" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Calculator API Integration Tests" errors="0" failures="0" skipped="0" timestamp="2025-10-04T11:49:05" time="1.618" tests="4">
+    <testcase classname="Calculator API Integration Tests GET / should return welcome message" name="Calculator API Integration Tests GET / should return welcome message" time="0.078">
+    </testcase>
+    <testcase classname="Calculator API Integration Tests POST /calculate should perform addition" name="Calculator API Integration Tests POST /calculate should perform addition" time="0.026">
+    </testcase>
+    <testcase classname="Calculator API Integration Tests POST /calculate should return error for invalid operation" name="Calculator API Integration Tests POST /calculate should return error for invalid operation" time="0.007">
+    </testcase>
+    <testcase classname="Calculator API Integration Tests POST /calculate should return error for missing parameters" name="Calculator API Integration Tests POST /calculate should return error for missing parameters" time="0.01">
+    </testcase>
+  </testsuite>
+</testsuites>
