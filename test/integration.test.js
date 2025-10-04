@@ -41,5 +41,13 @@ describe('Calculator API Integration Tests', () => {
             expect(response.status).toBe(400);
             expect(response.body.error).toBe('Missing required parameters');
         });
+        test('should return error for division by zero', async () => {
+            const response = await request(app)
+                .post('/calculate')
+                .send({ operation: 'divide', a: 12, b: 0 });
+        
+            expect(response.status).toBe(400);
+            expect(response.body.error).toBe('Division by zero');
+        });
     });
 });
