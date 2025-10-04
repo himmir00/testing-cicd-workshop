@@ -4,11 +4,12 @@ const { calculator,server } = require('../app');
 afterAll((done) => {
     server.close(done); // closes the server so Jest can exit
 });
+ 
 
 describe('Calculator Unit Tests', () => {
     describe('Addition', () => {
         test('should add two positive numbers', () => {
-            expect(calculator.add(2, 4)).toBe(5);
+            expect(calculator.add(2, 3)).toBe(5);
         });
         
         test('should add negative numbers', () => {
@@ -38,5 +39,3 @@ describe('Calculator Unit Tests', () => {
         });
     });
 });
-
-
