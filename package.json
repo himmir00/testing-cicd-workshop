@@ -1,12 +1,14 @@
+ 
 {
   "name": "pipelinejs",
   "version": "1.0.0",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "test": "jest",
-    "test:unit": "jest test/unit.test.js",
-    "test:integration": "jest test/integration.test.js",
+    "test:unit": "jest tests/unit.test.js",
+    "test:integration": "jest tests/integration.test.js",
     "test:coverage": "jest --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -19,10 +21,13 @@
     ],
     "reporters": [
       "default",
-      ["jest-html-reporter",{
-        "pageTitle": "Calculator API Test Report",
-        "outputPath": "test-report.html"
-      }],
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Calculate API Test Report",
+          "outputPath": "test-report.html"
+        }
+      ],
       [
         "jest-junit",
         {
@@ -40,7 +45,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "CI/CD Pipeline excercise for testing team",
   "dependencies": {
     "express": "^5.1.0"
   },
@@ -50,7 +55,10 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "jest": "^30.2.0",
+    "jest-html-reporter": "^4.3.0",
+    "jest-junit": "^16.0.0",
     "prettier": "^3.6.2",
     "supertest": "^7.1.4"
   }
 }
+ 
