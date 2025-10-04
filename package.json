@@ -7,9 +7,9 @@
     "test": "jest",
     "test:unit": "jest test/unit.test.js",
     "test:integration": "jest test/integration.test.js",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
     "lint": "eslint .",
-    "lint:fix":"eslint . --fix"
+    "lint:fix": "eslint . --fix"
   },
   "jest": {
     "testEnvironment": "node",
@@ -26,7 +26,12 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "audit-ci": "^7.1.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "jest": "^30.2.0",
+    "prettier": "^3.6.2",
     "supertest": "^7.1.4"
   }
 }
